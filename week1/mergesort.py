@@ -1,3 +1,5 @@
+import random
+
 def merge(arr, l, m, r):
     n1 = m - l + 1
     n2 = r - m
@@ -59,7 +61,8 @@ def mergeSort(arr, l, r):
  
  
 if __name__ == '__main__':
-    array = []
+    length = 10000
+    array = [random.random() for i in range(length)]
     n = len(array)
     mergeSort(array, 0, n-1)
     print(array)
