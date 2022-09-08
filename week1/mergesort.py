@@ -61,8 +61,8 @@ def mergeSort(arr, l, r):
  
  
 if __name__ == '__main__':
-    length = 10000
+    length = 10000000
     array = [random.random() for i in range(length)]
     n = len(array)
     mergeSort(array, 0, n-1)
-    print(array)
+    #print(array)
