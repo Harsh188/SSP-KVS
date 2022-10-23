@@ -1,0 +1,52 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 9  of event 'branches'
+# Event count (approx.): 1011070
+#
+# Overhead  Command  Shared Object      Symbol                
+# ........  .......  .................  ......................
+#
+    97.30%  a.out    a.out              [.] forLoop
+     2.54%  a.out    [kernel.kallsyms]  [k] security_mmap_file
+     0.16%  perf-ex  [kernel.kallsyms]  [k] native_write_msr
+
+
+# Samples: 6  of event 'branch-misses'
+# Event count (approx.): 2457
+#
+# Overhead  Command  Shared Object      Symbol              
+# ........  .......  .................  ....................
+#
+    93.24%  a.out    ld-2.31.so         [.] dl_cet_check
+     6.23%  perf-ex  [kernel.kallsyms]  [k] __calc_delta
+     0.53%  perf-ex  [kernel.kallsyms]  [k] native_write_msr
+
+
+# Samples: 7  of event 'cache-misses'
+# Event count (approx.): 8814
+#
+# Overhead  Command  Shared Object      Symbol                  
+# ........  .......  .................  ........................
+#
+    82.81%  a.out    ld-2.31.so         [.] dl_cet_check
+    15.52%  perf-ex  [kernel.kallsyms]  [k] native_write_msr
+     1.67%  perf-ex  [kernel.kallsyms]  [k] update_process_times
+
+
+# Samples: 7  of event 'cache-references'
+# Event count (approx.): 43581
+#
+# Overhead  Command  Shared Object      Symbol                  
+# ........  .......  .................  ........................
+#
+    93.50%  a.out    [kernel.kallsyms]  [k] clear_page_rep
+     6.13%  perf-ex  [kernel.kallsyms]  [k] native_apic_mem_read
+     0.37%  perf-ex  [kernel.kallsyms]  [k] native_write_msr
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#
