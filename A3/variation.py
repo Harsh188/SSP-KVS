@@ -3,11 +3,15 @@ import matplotlib.pyplot as plt
 
 def gen_graph(name, loops, shared):
     if name == 'Branch Miss':
-        index = 15
+        index = 8
     elif name == 'Branch':
-        index = 14
+        index = 7
     elif name == 'Instructions Per Cycle':
-        index = 12
+        index = 9
+    elif name == 'Cache References':
+        index = 5
+    elif name == 'Cache Misses':
+        index = 6
 
     loopsData = list()
 
@@ -19,7 +23,7 @@ def gen_graph(name, loops, shared):
     for i in range(len(shared)):
         sharedData.append(int(shared[i][index].strip().split(' ')[0].replace(',', '')))
 
-    print(loopsData, sharedData)
+    #print(loopsData, sharedData)
     plt.figure()
     plt.ylabel(f'{name}')
     plt.xlabel('Loop Iterations')
@@ -47,3 +51,5 @@ for file in os.listdir(os.getcwd()):
 gen_graph('Branch Miss', loops, shared)
 gen_graph('Branch', loops, shared)
 gen_graph('Instructions Per Cycle', loops, shared)
+gen_graph('Cache References', loops, shared)
+gen_graph('Cache Misses', loops, shared)

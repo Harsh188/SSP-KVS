@@ -1,23 +1,17 @@
-# started on Sun Oct 23 16:54:22 2022
+# started on Sun Oct 23 21:01:45 2022
 
 
  Performance counter stats for './A3 array':
 
-              5.10 msec task-clock                #    0.907 CPUs utilized          
-                 0      context-switches          #    0.000 /sec                   
-                 0      cpu-migrations            #    0.000 /sec                   
-             2,010      page-faults               #  394.461 K/sec                  
-        14,238,483      cycles                    #    2.794 GHz                    
-         2,143,453      stalled-cycles-frontend   #   15.05% frontend cycles idle   
-         3,936,163      stalled-cycles-backend    #   27.64% backend cycles idle    
-        18,893,777      instructions              #    1.33  insn per cycle         
-                                                  #    0.21  stalled cycles per insn
-         3,110,634      branches                  #  610.460 M/sec                  
-            11,531      branch-misses             #    0.37% of all branches        
+           554,390      cache-references                                            
+           105,229      cache-misses              #   18.981 % of all cache refs    
+         3,028,271      branches                                                    
+            11,279      branch-misses             #    0.37% of all branches        
+        18,503,167      instructions                                                
 
-       0.005620948 seconds time elapsed
+       0.009250760 seconds time elapsed
 
-       0.005630000 seconds user
-       0.000000000 seconds sys
+       0.000000000 seconds user
+       0.009296000 seconds sys
 
 
