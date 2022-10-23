@@ -1,6 +1,34 @@
 import os
 import matplotlib.pyplot as plt
 
+def gen_graph(name, loops, shared):
+    if name == 'Branch Miss':
+        index = 15
+    elif name == 'Branch':
+        index = 14
+    elif name == 'Instructions Per Cycle':
+        index = 12
+
+    loopsData = list()
+
+    for i in range(len(loops)):
+        loopsData.append(int(loops[i][index].strip().split(' ')[0].replace(',', '')))
+
+    sharedData = list()
+
+    for i in range(len(shared)):
+        sharedData.append(int(shared[i][index].strip().split(' ')[0].replace(',', '')))
+
+    print(loopsData, sharedData)
+    plt.figure()
+    plt.ylabel(f'{name}')
+    plt.xlabel('Loop Iterations')
+    plt.xticks(list(range(10)))
+    plt.scatter(list(range(10)), loopsData, color='blue')
+    plt.scatter(list(range(10)), sharedData, color='red')
+    plt.legend(['Loops', 'Large Arrays'])
+    plt.savefig(os.path.join(os.getcwd(), 'images', f'{name}.png'))
+
 loops = list()
 shared = list()
 
@@ -16,21 +44,6 @@ for file in os.listdir(os.getcwd()):
         shared.append(data)
         share.close()
 
-bmiss_loops = list()
-
-for i in range(len(loops)):
-    bmiss_loops.append(int(loops[i][15].strip().split(' ')[0].replace(',', '')))
-
-bmiss_shared = list()
-
-for i in range(len(shared)):
-    bmiss_shared.append(int(shared[i][15].strip().split(' ')[0].replace(',', '')))
-
-
-plt.ylabel('Branch Misses')
-plt.xlabel('Loop Iterations')
-plt.xticks(list(range(10)))
-plt.scatter(list(range(10)), bmiss_loops, color='blue')
-plt.scatter(list(range(10)), bmiss_shared, color='red')
-plt.legend(['Loops', 'Large Arrays'])
-plt.savefig(os.path.join(os.getcwd(), 'images', 'branch miss.png'))
+gen_graph('Branch Miss', loops, shared)
+gen_graph('Branch', loops, shared)
+gen_graph('Instructions Per Cycle', loops, shared)
