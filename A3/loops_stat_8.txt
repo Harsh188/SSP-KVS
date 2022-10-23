@@ -1,0 +1,23 @@
+# started on Sun Oct 23 16:54:23 2022
+
+
+ Performance counter stats for './A3':
+
+              1.72 msec task-clock                #    0.829 CPUs utilized          
+                 0      context-switches          #    0.000 /sec                   
+                 0      cpu-migrations            #    0.000 /sec                   
+                60      page-faults               #   34.828 K/sec                  
+         3,642,067      cycles                    #    2.114 GHz                    
+            92,359      stalled-cycles-frontend   #    2.54% frontend cycles idle   
+         1,812,529      stalled-cycles-backend    #   49.77% backend cycles idle    
+         4,970,852      instructions              #    1.36  insn per cycle         
+                                                  #    0.36  stalled cycles per insn
+         1,201,675      branches                  #  697.533 M/sec                  
+             5,467      branch-misses             #    0.45% of all branches        
+
+       0.002076959 seconds time elapsed
+
+       0.002170000 seconds user
+       0.000000000 seconds sys
+
+
