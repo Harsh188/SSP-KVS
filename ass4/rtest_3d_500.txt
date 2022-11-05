@@ -1,0 +1,12 @@
+Executing row test...
+
+ Performance counter stats for './rtest3d':
+
+         49,50,962      cache-misses                                                
+
+       1.147261479 seconds time elapsed
+
+       0.961432000 seconds user
+       0.174086000 seconds sys
+
+

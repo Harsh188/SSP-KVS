@@ -12,4 +12,4 @@ ctest3d:  a4.c
 all: rtest2d ctest2d rtest3d ctest3d
 
 clean:
-	@rm -f rtest2d ctest2d rtest3d rtest3d
+	@rm -f rtest2d ctest2d rtest3d ctest3d

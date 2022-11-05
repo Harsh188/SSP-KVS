@@ -17,8 +17,12 @@ def gen_graph(name, column, row):
     for i in range(len(row)):
         rowData.append(float(row[i][index].strip().split(' ')[0].replace(',', '')))
 
-    #print(columnData, rowData)
-    dim_list = [100,1000,10000,100000,1000000]
+    print(columnData, rowData)
+    dim_list = [100, 500, 1000]
+
+    columnData.sort()
+    rowData.sort()
+    
     plt.figure()
     plt.ylabel(name)
     plt.xlabel('Array Dimension')
