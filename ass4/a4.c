@@ -27,7 +27,7 @@ void arr_init(int *arr, int sz) {
         arr[i] = rand() % RAND_INT_MAX;
 }
 
-int main(int argc) {
+int main(int argc, char *argv[]) {
 	/*
 		argc: int conidtion to change 2d/3d array creation
 				0 - create 2d array
@@ -36,7 +36,7 @@ int main(int argc) {
 	int **arr_2d;
 	int ***arr_3d;
 
-	if(argc==0){
+	if(ARRAY==0){
 		arr_2d = (int **) malloc(sizeof(int *) * DIM);
 		for (register int i = 0; i < DIM; i++) {
 			arr_2d[i] = (int *) malloc(sizeof(int) * DIM);
@@ -57,7 +57,7 @@ int main(int argc) {
 	#ifdef RTEST
 	printf("Executing row test...\n");
 	for (register int i = 0; i < DIM; i++) {
-		if(argc==0){
+		if(ARRAY==0){
 			for (register int j = 0; j < DIM; j++) {
 				arr_2d[i][j] = arr_2d[i][j] * 2;
 			}
@@ -75,7 +75,7 @@ int main(int argc) {
 	#ifdef CTEST
 	printf("Executing column test...\n");
 	for (register int i = 0; i < DIM; i++) {
-		if(argc==0){
+		if(ARRAY==0){
 			for (register int j = 0; j < DIM; j++) {
 				arr_2d[j][i] = arr_2d[j][i] * 2;
 			}

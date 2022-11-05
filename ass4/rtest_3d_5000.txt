@@ -1,0 +1,12 @@
+./rtest3d: Killed
+
+ Performance counter stats for './rtest3d':
+
+      27,00,87,713      cache-misses                                                
+
+      53.771658937 seconds time elapsed
+
+      34.942016000 seconds user
+       8.033016000 seconds sys
+
+

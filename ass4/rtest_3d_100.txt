@@ -2,11 +2,11 @@ Executing row test...
 
  Performance counter stats for './rtest3d':
 
-            75,674      cache-misses                                                
+            68,390      cache-misses                                                
 
-       0.012615257 seconds time elapsed
+       0.012625013 seconds time elapsed
 
-       0.012625000 seconds user
-       0.000000000 seconds sys
+       0.009476000 seconds user
+       0.003158000 seconds sys
 
 
