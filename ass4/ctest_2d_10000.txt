@@ -1,0 +1,12 @@
+Executing column test...
+
+ Performance counter stats for './ctest2d':
+
+          1,14,718      cache-misses                                                
+
+       0.012832076 seconds time elapsed
+
+       0.012840000 seconds user
+       0.000000000 seconds sys
+
+

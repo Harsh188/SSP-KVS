@@ -1,0 +1,12 @@
+Executing row test...
+
+ Performance counter stats for './rtest2d':
+
+            76,277      cache-misses                                                
+
+       0.012726206 seconds time elapsed
+
+       0.012683000 seconds user
+       0.000000000 seconds sys
+
+

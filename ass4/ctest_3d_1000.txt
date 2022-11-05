@@ -1,0 +1,12 @@
+Executing column test...
+
+ Performance counter stats for './ctest3d':
+
+          1,08,612      cache-misses                                                
+
+       0.012825756 seconds time elapsed
+
+       0.009626000 seconds user
+       0.003208000 seconds sys
+
+
